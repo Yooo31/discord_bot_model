@@ -15,13 +15,9 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 async def on_ready():
   print("Conection Ok!")
 
-@bot.command(name='r')
+@bot.command(name='command_name')
 async def lunch_royaltiz(ctx):
-  await ctx.channel.send("Royaltiz")
-
-@bot.command(name='igraal')
-async def lunch_royaltiz(ctx):
-  await ctx.channel.send("Royaltiz")
-
+  result = exec(open("./file_toexec.py").read())
+  await ctx.channel.send(result)
 
 bot.run(os.getenv("TOKEN"))
