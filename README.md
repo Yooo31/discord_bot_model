@@ -1,2 +1,3 @@
-# discord_bot
-The basic code for creating a discord bot
+# Install variable env
+
+pip install -U python-dotenv
